@@ -17,6 +17,8 @@ var N_INV_SLOTS = INV_X_SIZE*INV_Y_SIZE;
 var Game = function(args) {
     var A = args || {};
     
+    genGameItems();
+    
     this.level = A.level || new Level();
     
     this.players = A.players || [new Player({
