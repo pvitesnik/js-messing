@@ -13,7 +13,7 @@ var GameItem = function(args) {
     
     this.name = this.type.name;
     this.color = new Color(this.type.color) || new Color();
-    this.imgPath = this.type.imgPath || undefined;
+    this.img = this.type.img || undefined;
     
     // TODO: THIS STUFF!!
     this.owner = A.owner;

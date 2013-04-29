@@ -16,7 +16,7 @@ var gGameItems = {
         slot : ITEM_SLOT._WEAPON_2HAND,
         
         color: new Color(150, 120, 120),
-        imgPath: 'img/icon/fists.png',
+        img: CachedImage('img/icon/fists.png'),
         
         damage : 1,
         armour: 0,
@@ -36,8 +36,7 @@ var gGameItems = {
         slot : ITEM_SLOT._WEAPON_1HAND,
         
         color: new Color(140, 140, 130),
-        imgPath: 'img/icon/sword-basic.png',
-        // imgPath: 'img/icon/treasure-chest-basic.png',
+        img: CachedImage('img/icon/sword-basic.png'),
         
         damage : 2,
         armour: 0,
@@ -77,7 +76,7 @@ var gGameItems = {
         slot : ITEM_SLOT.LEGS,
         
         color: new Color(120, 80, 80),
-        imgPath: 'img/icon/pants-basic.png',
+        img: CachedImage('img/icon/pants-basic.png'),
         
         damage : 0,
         armour: 0,
@@ -117,7 +116,7 @@ var gGameItems = {
         slot : ITEM_SLOT.INV_ONLY,
         
         color: new Color(0, 50, 200),
-        imgPath: 'img/icon/potion-basic.png',
+        img: CachedImage('img/icon/potion-basic.png'),
         
         damage : 0,
         armour: 0,
@@ -135,7 +134,7 @@ var gGameItems = {
         slot : ITEM_SLOT.INV_ONLY,
         
         color: new Color(90, 90, 150),
-        imgPath: 'img/icon/potion-basic.png',
+        img: CachedImage('img/icon/potion-basic.png'),
         
         damage : 0,
         armour: 0,
@@ -163,7 +162,7 @@ var gGameItems = {
         slot : ITEM_SLOT.INV_ONLY,
         
         color: new Color(150, 150, 0),
-        imgPath: 'img/icon/coin-basic.png',
+        img: CachedImage('img/icon/coin-basic.png'),
         
         damage : 0,
         armour: 0,
@@ -204,7 +203,7 @@ var gGameItems = {
         slot : ITEM_SLOT.INV_ONLY,
         
         color: new Color(120, 200, 100),
-        imgPath: 'img/icon/fish-small.png',
+        img: CachedImage('img/icon/fish-small.png'),
         
         damage : 0,
         armour: 0,
@@ -223,7 +222,7 @@ var gGameItems = {
         slot : ITEM_SLOT.INV_ONLY,
         
         color: new Color(200, 200, 200),
-        imgPath: 'img/icon/fish-big.png',
+        img: CachedImage('img/icon/fish-big.png'),
         
         damage : 0,
         armour: 0,
@@ -242,7 +241,7 @@ var gGameItems = {
         slot : ITEM_SLOT.INV_ONLY,
         
         color: new Color(120, 180, 120),
-        imgPath: 'img/icon/fish-small.png',
+        img: CachedImage('img/icon/fish-small.png'),
         
         damage : 0,
         armour: 0,
@@ -261,8 +260,8 @@ var gGameItems = {
         actionType : ACTION_TYPE.NONE,
         slot : ITEM_SLOT.INV_ONLY,
         
-        color: new Color(120, 180, 120),
-        imgPath: 'img/icon/fish-frank.png',
+        color: new Color(180, 180, 120),
+        img: CachedImage('img/icon/fish-frank.png'),
         
         damage : 0,
         armour: 0,

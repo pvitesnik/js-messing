@@ -773,8 +773,8 @@ Game.prototype.renderInv = function() {
             if (inv[i] !== undefined) {
                 
                 item.css('background-color', 'rgb(' + inv[i].color.rgbString() + ')');
-                if (inv[i].imgPath) {
-                    item.css('background-image', 'url("'+inv[i].imgPath+'")');
+                if (inv[i].img) {
+                    item.css('background-image', 'url("'+inv[i].img.src+'")');
                     item.css('background-size', '100% 100%');
                 }
                 
@@ -826,8 +826,8 @@ Game.prototype.renderInv = function() {
             
             item.css('background-color', 'rgb(' + qItem.color.rgbString() + ')');
             item.attr('title', qItem.name + ' (' + slot.data('id') + ' ' + slot.data('type') + ')');
-            if (qItem.imgPath) {
-                item.css('background-image', 'url("'+qItem.imgPath+'")');
+            if (qItem.img) {
+                item.css('background-image', 'url("'+qItem.img.src+'")');
                 item.css('background-size', '100% 100%');
             }
             

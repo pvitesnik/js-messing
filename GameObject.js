@@ -30,7 +30,7 @@ var GameObject = function(args) {
     this.h = A.h || 10;
     
     this.color = new Color(A.color) || new Color(0, 0, 150);
-    this.imgPath = A.imgPath || undefined;
+    this.img = A.img || undefined;
     
     this.hide = A.hide === undefined ? true : A.hide;
     this.blocking = A.blocking || false;
@@ -71,10 +71,8 @@ GameObject.prototype.render = function(canvas) {
     ctx.fillStyle = 'rgb(' + this.color.rgbString() + ')';
     ctx.fillRect(this.pos.x*this.w,this.pos.y*this.h,this.w,this.h);
     
-    if (this.imgPath) {
-        var img = new Image();
-        img.src = this.imgPath;
-        ctx.drawImage(img, this.pos.x*this.w,this.pos.y*this.h,this.w,this.h);
+    if (this.img) {
+        ctx.drawImage(this.img, this.pos.x*this.w,this.pos.y*this.h,this.w,this.h);
     }
 }
 

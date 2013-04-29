@@ -53,7 +53,7 @@ var GameItemType = function(args) {
     this.name = A.name || 'My New Item';
     
     this.color = new Color(A.color) || new Color();
-    this.imgPath = A.imgPath || undefined;
+    this.img = A.img || undefined;
     
     this.cost = A.cost || 0;
     this.weight = A.weight || 0;
