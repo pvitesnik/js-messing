@@ -1,0 +1,235 @@
+/* game.css */
+
+div#game  {
+    position: relative;
+    margin: 5px;
+    top: 0;
+    left: 0;
+    padding-right: 15px;
+}
+
+
+/* style scrollbars (webkit only for the time being -- others can put ) */
+::-webkit-scrollbar {
+    background-color: rgb(50, 50, 50);
+    width: 10px;
+    overflow: visible;
+    border: solid 2px rgb(255,255,255);
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgb(180, 150, 150);
+    border: solid 1px rgb(140,125,125);
+}
+
+
+
+
+.message-div {
+    height:100px;
+    overflow: auto;
+    display: block;
+    width: 500px;
+    padding: 10px;
+    
+    background-color: rgb(30,30,30);
+    
+    
+    color: rgb(150,100,100);
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 9pt;
+}
+
+.message-div .row {
+    display: block;
+    width: 100%;
+}
+
+.message-div .message {
+    display: block;
+    padding: 3px;
+    border: solid 1px rgb(150,100,100);
+    margin: 2px;
+}
+
+
+
+.inventory  {
+    top: 0;
+    position: absolute;
+    
+    border-left-style: solid;
+    border-left-width: 2px;
+    border-left-color: rgb(150,100,100);
+    
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.inventory  .title {
+    color: rgb(150,100,100);
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 18pt;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.inventory  .inv-slots  {
+    color: rgb(150,100,100);
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 14pt;
+    
+    width: 100%;
+    display: block;
+    margin-bottom: 5px;
+    position: relative;
+    
+    
+    border: 1px solid rgb(120,60,60);
+    background-color: rgb(150,140,140);
+}
+
+.inventory  .slot  {
+    display: block;
+    
+    position: absolute;
+    
+    border: 2px solid rgb(120,60,60);
+    background-color: rgb(255,250,250);
+}
+
+.inventory  .slot.Armour  {
+    display: block;
+    
+    position: absolute;
+    
+    border: 2px solid rgb(120,80,80);
+    background-color: rgb(240,220,220);
+}
+
+.inventory  .slot.Jewelery  {
+    display: block;
+    
+    position: absolute;
+    
+    border: 2px solid rgb(200,200,100);
+    background-color: rgb(255,255,220);
+}
+
+.inventory  .slot.Weapon  {
+    display: block;
+    
+    position: absolute;
+    
+    border: 2px solid rgb(200,100,100);
+    background-color: rgb(255,220,220);
+}
+
+.inventory .slot .disable {
+    background : url("img/icon/square-cross-red.png") top left;
+    background-size: 100% 100%;
+}
+
+.inventory .stat.floater {
+    display: block;
+    position: absolute;
+    
+    color: rgb(40,35,35);
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 7pt;
+}
+
+
+.inventory  .item-list {
+    color: rgb(150,100,100);
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 14pt;
+    
+    width: 100%;
+    display: table;
+    
+    border-right: 1px solid rgb(120,60,60);
+    border-bottom: 1px solid rgb(120,60,60);
+}
+
+.inventory  .row {
+    display: table-row;
+    height: 10%;
+}
+
+.inventory  .cell {
+    display: table-cell;
+    width: 10%;
+    
+    border-left: 1px solid rgb(120,60,60);
+    border-top: 1px solid rgb(120,60,60);
+    
+    background-color: rgb(255,250,250);
+    
+    position: relative;
+}
+
+.inventory  .item {
+    position: absolute;
+
+    height: 100%;
+    width: 100%;
+}
+
+.inventory .commodity-label {
+    font-size: 6pt;
+    
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.inventory .selected .commodity-label {
+    bottom: -3px;
+    right: -3px;
+}
+
+.commodity-label.dark {
+    color: rgb(30,25,25);
+}
+
+.commodity-label.light {
+    color: rgb(255,240,240);
+}
+
+.inventory  .detail-box {
+    color: rgb(150,100,100);
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 12pt;
+
+    padding: 3px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    min-height: 20px;
+    border: 1px solid rgb(120,60,60);
+}
+
+.inventory  .detail-box  .main{
+}
+
+.inventory  .detail-box  .detail{
+    padding: 5px;
+    font-size: 0.6em;
+}
+
+.inventory  .detail-box  .detail p{
+    margin: 0;
+    margin-bottom: 0.5em;
+}
+
+
+.inventory .cell .disabled {
+    background-color: rgb(45,40,40);
+}
+
+.inventory  .selected {
+    border: 3px solid rgb(180,50,50) !important;
+}
+
+

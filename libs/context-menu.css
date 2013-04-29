@@ -1,0 +1,49 @@
+.cmenu.cont {
+    border: 1px solid darkgrey; display: none; position: absolute; z-index:100;
+}
+
+.cmenu {
+    margin: 0; padding: 0.1em; list-style-type: none;
+    background-color: white;
+    
+    color: rgb(125,85,85);
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 10pt;
+    font-weight: bold;
+}
+
+.cmenu li {
+    padding:0.2em 0 0.2em 0;
+}
+
+.cmenu li:hover {
+}
+
+.cmenu hr {
+    border: 0;
+    border-bottom: 1px solid grey;
+    margin: 3px 0px 3px 0px;
+    width: 10em;
+}
+
+.cmenu a {
+    text-decoration: none;
+    color: inherit;
+
+    border: 0 !important;
+    padding:0.2em;
+}
+
+.cmenu a:hover {
+    text-decoration: none;
+    color: white;
+    /*background-color: rgb(160, 200, 50);*/
+    background-color: rgb(200,80,80);
+}
+
+.cmenu .topSep {
+    font-size: 90%;
+    border-top: 1px solid gray;
+    margin-top: 0.3em;
+    padding-top: 0.2em;
+}
