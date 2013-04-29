@@ -10,6 +10,7 @@ var CachedImage = function(src) {
         img = new Image();
         img.src = src;
         gCachedImages[src] = img;
+        $('body').append($(img).css('display', 'none'));
     }
     
     return img;
