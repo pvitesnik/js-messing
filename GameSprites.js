@@ -3,6 +3,7 @@
 
 var gGameSprites = undefined;
 
+
 function genGameSprites() {
     
     if (gGameSprites) return;
