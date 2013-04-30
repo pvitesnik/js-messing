@@ -30,7 +30,8 @@ var GameObject = function(args) {
     this.h = A.h || 10;
     
     this.color = new Color(A.color) || new Color(0, 0, 150);
-    this.img = A.img || undefined;
+    this.sprite = A.sprite || undefined;
+    this.spriteBM = A.spriteBM || undefined;
     
     this.hide = A.hide === undefined ? true : A.hide;
     this.blocking = A.blocking || false;
@@ -62,7 +63,6 @@ var GameObject = function(args) {
 
 extend(GameObject.prototype, objCont);
 
-
 GameObject.prototype.render = function(canvas) {
     
     if (this.hide) return;
@@ -71,8 +71,14 @@ GameObject.prototype.render = function(canvas) {
     ctx.fillStyle = 'rgb(' + this.color.rgbString() + ')';
     ctx.fillRect(this.pos.x*this.w,this.pos.y*this.h,this.w,this.h);
     
-    if (this.img) {
-        ctx.drawImage(this.img, this.pos.x*this.w,this.pos.y*this.h,this.w,this.h);
+    var s = this.sprite;
+    if (s) {
+        var bm = this.sprite.bookmarks[this.spriteBM];
+        var img = this.sprite.img;
+        
+        var xUnit = img.width / bm.zoomX
+        var yUnit = img.height / bm.zoomY;
+        ctx.drawImage(img, xUnit * bm.xOffset, yUnit * bm.yOffset, xUnit, yUnit, this.pos.x*this.w, this.pos.y*this.h, this.w, this.h);
     }
 }
 

@@ -17,6 +17,7 @@ var N_INV_SLOTS = INV_X_SIZE*INV_Y_SIZE;
 var Game = function(args) {
     var A = args || {};
     
+    genGameSprites();
     genGameItems();
     
     this.level = A.level || new Level();
@@ -775,9 +776,12 @@ Game.prototype.renderInv = function() {
             if (inv[i] !== undefined) {
                 
                 item.css('background-color', 'rgb(' + inv[i].color.rgbString() + ')');
-                if (inv[i].img) {
-                    item.css('background-image', 'url("'+inv[i].img.src+'")');
-                    item.css('background-size', '100% 100%');
+                if (inv[i].sprite) {
+                    item.css({
+                        'background-image':'url('+inv[i].sprite.img.src+')', 
+                        'background-size':100*inv[i].sprite.bookmarks[inv[i].spriteBM].zoomX+'% ' + 100*inv[i].sprite.bookmarks[inv[i].spriteBM].zoomY+'%',
+                        'background-position':-100*inv[i].sprite.bookmarks[inv[i].spriteBM].xOffset+'% ' + -100*inv[i].sprite.bookmarks[inv[i].spriteBM].yOffset+'%',
+                    });
                 }
                 
                 item.attr('title', inv[i].name);
@@ -828,10 +832,18 @@ Game.prototype.renderInv = function() {
             
             item.css('background-color', 'rgb(' + qItem.color.rgbString() + ')');
             item.attr('title', qItem.name + ' (' + slot.data('id') + ' ' + slot.data('type') + ')');
-            if (qItem.img) {
-                item.css('background-image', 'url("'+qItem.img.src+'")');
-                item.css('background-size', '100% 100%');
+            // if (qItem.img) {
+                // item.css('background-image', 'url("'+qItem.img.src+'")');
+                // item.css('background-size', '100% 100%');
+            // }
+            if (qItem.sprite) {
+                item.css({
+                    'background-image':'url('+qItem.sprite.img.src+')', 
+                    'background-size':100*qItem.sprite.bookmarks[qItem.spriteBM].zoomX+'% ' + 100*qItem.sprite.bookmarks[qItem.spriteBM].zoomY+'%',
+                    'background-position':-100*qItem.sprite.bookmarks[qItem.spriteBM].xOffset+'% ' + -100*qItem.sprite.bookmarks[qItem.spriteBM].yOffset+'%',
+                });
             }
+            
             
             item.attr('data-cmUseContext', 'inv-item');
             item.data('inv-index', qk[i]);

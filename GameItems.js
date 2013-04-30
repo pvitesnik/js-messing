@@ -6,6 +6,8 @@ var gGameItems = undefined;
 var genGameItems = function() {
 
     if (gGameItems) return;
+    
+    genGameSprites();
 
     gGameItems = {
     
@@ -21,7 +23,8 @@ var genGameItems = function() {
             slot : ITEM_SLOT._WEAPON_2HAND,
             
             color: new Color(150, 120, 120),
-            img: CachedImage('img/icon/fists.png'),
+            sprite: gGameSprites.icons,
+            spriteBM: 'weapon.fists',
             
             damage : 1,
             armour: 0,
@@ -41,7 +44,8 @@ var genGameItems = function() {
             slot : ITEM_SLOT._WEAPON_1HAND,
             
             color: new Color(140, 140, 130),
-            img: CachedImage('img/icon/sword-basic.png'),
+            sprite: gGameSprites.icons,
+            spriteBM: 'weapon.sword.basic',
             
             damage : 2,
             armour: 0,
@@ -64,6 +68,8 @@ var genGameItems = function() {
             slot : ITEM_SLOT.TORSO,
             
             color: new Color(0, 0, 120),
+            sprite: gGameSprites.icons,
+            spriteBM: 'misc.none',
             
             damage : 0,
             armour: 0,
@@ -81,7 +87,8 @@ var genGameItems = function() {
             slot : ITEM_SLOT.LEGS,
             
             color: new Color(120, 80, 80),
-            img: CachedImage('img/icon/pants-basic.png'),
+            sprite: gGameSprites.icons,
+            spriteBM: 'armour.pants.basic',
             
             damage : 0,
             armour: 0,
@@ -99,6 +106,8 @@ var genGameItems = function() {
             slot : ITEM_SLOT.FEET,
             
             color: new Color(150, 100, 100),
+            sprite: gGameSprites.icons,
+            spriteBM: 'misc.none',
             
             damage : 0,
             armour: 1,
@@ -121,7 +130,8 @@ var genGameItems = function() {
             slot : ITEM_SLOT.INV_ONLY,
             
             color: new Color(0, 50, 200),
-            img: CachedImage('img/icon/potion-basic.png'),
+            sprite: gGameSprites.icons,
+            spriteBM: 'misc.potion.basic',
             
             damage : 0,
             armour: 0,
@@ -139,7 +149,8 @@ var genGameItems = function() {
             slot : ITEM_SLOT.INV_ONLY,
             
             color: new Color(90, 90, 150),
-            img: CachedImage('img/icon/potion-basic.png'),
+            sprite: gGameSprites.icons,
+            spriteBM: 'misc.potion.basic',
             
             damage : 0,
             armour: 0,
@@ -167,7 +178,8 @@ var genGameItems = function() {
             slot : ITEM_SLOT.INV_ONLY,
             
             color: new Color(150, 150, 0),
-            img: CachedImage('img/icon/coin-basic.png'),
+            sprite: gGameSprites.icons,
+            spriteBM: 'misc.coin',
             
             damage : 0,
             armour: 0,
@@ -187,6 +199,8 @@ var genGameItems = function() {
             slot : ITEM_SLOT.INV_ONLY,
             
             color: new Color(60, 50, 50),
+            sprite: gGameSprites.icons,
+            spriteBM: 'misc.none',
             
             damage : 0,
             armour: 0,
@@ -208,7 +222,8 @@ var genGameItems = function() {
             slot : ITEM_SLOT.INV_ONLY,
             
             color: new Color(120, 200, 100),
-            img: CachedImage('img/icon/fish-small.png'),
+            sprite: gGameSprites.icons,
+            spriteBM: 'misc.fish.small',
             
             damage : 0,
             armour: 0,
@@ -227,7 +242,8 @@ var genGameItems = function() {
             slot : ITEM_SLOT.INV_ONLY,
             
             color: new Color(200, 200, 200),
-            img: CachedImage('img/icon/fish-big.png'),
+            sprite: gGameSprites.icons,
+            spriteBM: 'misc.fish.big',
             
             damage : 0,
             armour: 0,
@@ -246,7 +262,8 @@ var genGameItems = function() {
             slot : ITEM_SLOT.INV_ONLY,
             
             color: new Color(120, 180, 120),
-            img: CachedImage('img/icon/fish-small.png'),
+            sprite: gGameSprites.icons,
+            spriteBM: 'misc.fish.small',
             
             damage : 0,
             armour: 0,
@@ -266,7 +283,8 @@ var genGameItems = function() {
             slot : ITEM_SLOT.INV_ONLY,
             
             color: new Color(180, 180, 120),
-            img: CachedImage('img/icon/fish-frank.png'),
+            sprite: gGameSprites.icons,
+            spriteBM: 'misc.fish.frank',
             
             damage : 0,
             armour: 0,
